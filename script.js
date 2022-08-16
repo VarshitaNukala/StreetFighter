@@ -52,7 +52,6 @@ const updateGame = (p1, p2, gameState) => {
   if (p1.health <= 0 || p2.health <= 0) {
     game.isOver = true;
     game.declareWinner(game.isOver, p1, p2);
-    
   }
 };
 
@@ -140,14 +139,14 @@ class Game {
       p1.heal(p2);
     }
     // Once isOver is TRUE run the declareWinner() method
-    
+
     this.declareWinner(this.isOver, p1, p2);
   }
 }
 
 // ** Create 2 players using the player class **
-let player1 = new Player("Sheldon", 100, 10);
-let player2 = new Player("Lenord", 100, 10);
+let player1 = new Player("Player1", 100, 10);
+let player2 = new Player("Player2", 100, 10);
 // ** Save original Player Data into a variable in order to reset **
 let p1 = player1;
 let p2 = player2;
